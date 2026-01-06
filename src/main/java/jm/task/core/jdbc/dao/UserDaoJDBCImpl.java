@@ -1,6 +1,5 @@
 package jm.task.core.jdbc.dao;
 
-import jm.task.core.jdbc.Main;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
 
@@ -85,12 +84,12 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void cleanUsersTable() {
-    String sql = "DELETE FROM users";
-    try(Connection connection = Util.getConnection();
-    Statement statement = connection.createStatement()){
-        statement.execute(sql);
-    } catch (SQLException e) {
-        throw new RuntimeException(e);
-    }
+        String sql = "DELETE FROM users";
+        try (Connection connection = Util.getConnection();
+             Statement statement = connection.createStatement()) {
+            statement.execute(sql);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
