@@ -18,5 +18,6 @@ public class Main {
         System.out.println(usi.getAllUsers());
         usi.cleanUsersTable();
         usi.dropUsersTable();
+        //testing
     }
 }
