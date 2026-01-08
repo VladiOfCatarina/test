@@ -18,6 +18,8 @@ public class Util {
         return DriverManager.getConnection(URL, USER, PASS);
     }
 
+
+    // Подключение через Hibernate
     private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory() {
